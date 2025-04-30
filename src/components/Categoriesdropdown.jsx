@@ -1,7 +1,7 @@
 import React from "react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
-const Categoriesdropdown = ({ items = [] }) => {
+const CategoriesDropdown = ({ items = [] }) => {
   return (
     <div className="absolute hidden group-hover:block w-64 max-h-80 overflow-y-auto bg-white text-black shadow-md mt-2 p-2 z-50 space-y-2 rounded">
       {items.map((item, index) => (
@@ -20,4 +20,4 @@ const Categoriesdropdown = ({ items = [] }) => {
   );
 };
 
-export default Categoriesdropdown;
+export default CategoriesDropdown;

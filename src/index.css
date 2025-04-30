@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
-@theme {
-  --color-primaryColor: #def5f5;
+/* styles.css */
+.nav-link {
+  @apply cursor-pointer hover:drop-shadow-2xl px-1 py-1 hover:rounded-4xl  hover:bg-[#3a3a3a4f] transition-all duration-100 ease-in;
 }

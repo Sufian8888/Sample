@@ -8,7 +8,7 @@ import {
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { BsFillBookmarkStarFill } from "react-icons/bs";
 import Searchbar from "./components/Searchbar";
-import CategoriesDropdown from "./components/CategoriesDropdown.jsx";
+import CategoriesDropdown from "./components/CategoriesDropdown";
 
 const Navbar = () => {
   return (

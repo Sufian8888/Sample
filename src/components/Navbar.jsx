@@ -8,25 +8,8 @@ import {
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { BsFillBookmarkStarFill } from "react-icons/bs";
 import Searchbar from "./Searchbar";
+import CategoriesDropdown from "./CategoriesDropdown";
 
-const CategoriesDropdown = ({ items = [] }) => {
-  return (
-    <div className="absolute hidden group-hover:block w-64 max-h-80 overflow-y-auto bg-white text-black shadow-md mt-2 p-2 z-50 space-y-2 rounded">
-      {items.map((item, index) => (
-        <a
-          key={index}
-          href={item.href}
-          className="flex items-center justify-between gap-2 p-1 hover:bg-gray-100 rounded"
-        >
-          <div className="flex items-center gap-2">
-            <span>{item.label}</span>
-          </div>
-          <MdOutlineKeyboardArrowRight className="text-gray-500" />
-        </a>
-      ))}
-    </div>
-  );
-};
 
 const Navbar = () => {
   return (
@@ -46,31 +29,155 @@ const Navbar = () => {
           New In
         </a>
 
-        {/* Categories Dropdown */}
+
         <div className="relative group">
           <button className="flex items-center justify-center gap-1 nav-link">
-            Categories {/* Chevron Down (default) */}
+            Categories
             <FaChevronDown className="text-[10px] group-hover:hidden" />
-            {/* Chevron Up (on hover) */}
             <FaChevronUp className="text-[10px] hidden group-hover:inline" />
           </button>
           <CategoriesDropdown
             items={[
-              { label: "Electronics", href: "#" },
-              { label: "Clothing", href: "#" },
-              { label: "Home & Kitchen", href: "#" },
-              { label: "Beauty & Personal Care", href: "#" },
-              { label: "Sports & Outdoors", href: "#" },
-              { label: "Automotive", href: "#" },
-              { label: "Toys & Games", href: "#" },
-              { label: "Books", href: "#" },
-              { label: "Health & Wellness", href: "#" },
-              { label: "Office Supplies", href: "#" },
-              { label: "Pet Supplies", href: "#" },
-              { label: "Groceries", href: "#" },
-              { label: "Jewelry", href: "#" },
-              { label: "Shoes", href: "#" },
-              { label: "Baby Products", href: "#" },
+              {
+                label: "Clothing",
+                href: "#",
+                subItems: [
+                  { label: "Men's Clothing", href: "#" },
+                  { label: "Women's Clothing", href: "#" },
+                  { label: "Kids' Clothing", href: "#" },
+                  { label: "Traditional Wear", href: "#" },
+                ],
+              },
+              {
+                label: "Home & Kitchen",
+                href: "#",
+                subItems: [
+                  { label: "Cookware", href: "#" },
+                  { label: "Home Decor", href: "#" },
+                  { label: "Storage & Organization", href: "#" },
+                  { label: "Furniture", href: "#" },
+                ],
+              },
+              {
+                label: "Beauty & Personal Care",
+                href: "#",
+                subItems: [
+                  { label: "Makeup", href: "#" },
+                  { label: "Skincare", href: "#" },
+                  { label: "Hair Care", href: "#" },
+                  { label: "Fragrances", href: "#" },
+                ],
+              },
+              {
+                label: "Sports & Outdoors",
+                href: "#",
+                subItems: [
+                  { label: "Fitness Equipment", href: "#" },
+                  { label: "Camping Gear", href: "#" },
+                  { label: "Outdoor Clothing", href: "#" },
+                  { label: "Bikes & Accessories", href: "#" },
+                ],
+              },
+              {
+                label: "Automotive",
+                href: "#",
+                subItems: [
+                  { label: "Car Electronics", href: "#" },
+                  { label: "Car Accessories", href: "#" },
+                  { label: "Tools & Equipment", href: "#" },
+                  { label: "Motorcycle Gear", href: "#" },
+                ],
+              },
+              {
+                label: "Toys & Games",
+                href: "#",
+                subItems: [
+                  { label: "Action Figures", href: "#" },
+                  { label: "Puzzles & Board Games", href: "#" },
+                  { label: "Outdoor Toys", href: "#" },
+                  { label: "Educational Toys", href: "#" },
+                ],
+              },
+              {
+                label: "Books",
+                href: "#",
+                subItems: [
+                  { label: "Fiction", href: "#" },
+                  { label: "Non-Fiction", href: "#" },
+                  { label: "Children's Books", href: "#" },
+                  { label: "Academic & Textbooks", href: "#" },
+                ],
+              },
+              {
+                label: "Health & Wellness",
+                href: "#",
+                subItems: [
+                  { label: "Supplements", href: "#" },
+                  { label: "Fitness Trackers", href: "#" },
+                  { label: "Medical Devices", href: "#" },
+                  { label: "Personal Care Equipment", href: "#" },
+                ],
+              },
+              {
+                label: "Office Supplies",
+                href: "#",
+                subItems: [
+                  { label: "Writing Tools", href: "#" },
+                  { label: "Notebooks & Diaries", href: "#" },
+                  { label: "Office Furniture", href: "#" },
+                  { label: "Organizers", href: "#" },
+                ],
+              },
+              {
+                label: "Pet Supplies",
+                href: "#",
+                subItems: [
+                  { label: "Dog Supplies", href: "#" },
+                  { label: "Cat Supplies", href: "#" },
+                  { label: "Aquarium Accessories", href: "#" },
+                  { label: "Pet Food", href: "#" },
+                ],
+              },
+              {
+                label: "Groceries",
+                href: "#",
+                subItems: [
+                  { label: "Snacks & Beverages", href: "#" },
+                  { label: "Staples & Essentials", href: "#" },
+                  { label: "Dairy & Eggs", href: "#" },
+                  { label: "Packaged Foods", href: "#" },
+                ],
+              },
+              {
+                label: "Jewelry",
+                href: "#",
+                subItems: [
+                  { label: "Necklaces", href: "#" },
+                  { label: "Rings", href: "#" },
+                  { label: "Bracelets", href: "#" },
+                  { label: "Earrings", href: "#" },
+                ],
+              },
+              {
+                label: "Shoes",
+                href: "#",
+                subItems: [
+                  { label: "Men's Shoes", href: "#" },
+                  { label: "Women's Shoes", href: "#" },
+                  { label: "Kids' Shoes", href: "#" },
+                  { label: "Sports Shoes", href: "#" },
+                ],
+              },
+              {
+                label: "Baby Products",
+                href: "#",
+                subItems: [
+                  { label: "Diapers & Wipes", href: "#" },
+                  { label: "Feeding", href: "#" },
+                  { label: "Toys & Learning", href: "#" },
+                  { label: "Nursery", href: "#" },
+                ],
+              },
             ]}
           />
         </div>

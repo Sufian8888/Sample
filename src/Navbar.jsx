@@ -7,9 +7,8 @@ import {
 } from "react-icons/fa";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { BsFillBookmarkStarFill } from "react-icons/bs";
-import Searchbar from "./Searchbar";
-import CategoriesDropdown from "./CategoriesDropdown";
-
+import Searchbar from "./components/Searchbar";
+import CategoriesDropdown from "./components/CategoriesDropdown";
 
 const Navbar = () => {
   return (
@@ -28,7 +27,6 @@ const Navbar = () => {
         <a href="#" className="nav-link">
           New In
         </a>
-
 
         <div className="relative group">
           <button className="flex items-center justify-center gap-1 nav-link">

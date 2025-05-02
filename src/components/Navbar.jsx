@@ -12,19 +12,17 @@ import CategoriesDropdown from "../components/Categoriesdropdown";
 
 const Navbar = () => {
   return (
-    <div className="w-full bg-amber-500 text-white shadow-md px-4 py-2 font-medium flex items-center justify-between flex-wrap gap-2">
-      {/* Logo */}
+    <div className="w-full h-14 bg-amber-500 text-white shadow-md px-4 py-2 font-medium flex items-center justify-between flex-wrap gap-2">
       <div className="font-bold text-xl">Temu</div>
 
-      {/* Nav Links Left Section */}
       <div className="hidden md:flex items-center gap-2">
-        <a href="#" className="flex items-center gap-1 nav-link">
+        <a href="" className="flex items-center gap-1 nav-link">
           <FaThumbsUp /> Best Selling Items
         </a>
-        <a href="#" className="flex items-center gap-1 nav-link">
+        <a href="" className="flex items-center gap-1 nav-link">
           <BsFillBookmarkStarFill /> 5-Star Rated
         </a>
-        <a href="#" className="nav-link">
+        <a href="" className="nav-link">
           New In
         </a>
 
@@ -48,7 +46,7 @@ const Navbar = () => {
               },
               {
                 label: "Home & Kitchen",
-                href: "#",
+                href: "",
                 subItems: [
                   { label: "Cookware", href: "#" },
                   { label: "Home Decor", href: "#" },
@@ -181,18 +179,15 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Search Bar */}
       <div className="flex-1 flex justify-center">
         <Searchbar className="nav-link w-full max-w-md" />
       </div>
 
-      {/* Nav Links Right Section */}
       <div className="flex items-center gap-2">
         <a href="#" className="nav-link">
           Orders & Account
         </a>
 
-        {/* Support Dropdown */}
         <div className="relative group">
           <button className="nav-link">Support</button>
           <div className="absolute hidden group-hover:block bg-white text-black shadow-md mt-2 p-2 w-40 z-50 space-y-2">
@@ -201,7 +196,6 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Language Dropdown */}
         <div className="relative group">
           <button className="nav-link">Language</button>
           <div className="absolute hidden group-hover:block bg-white text-black shadow-md mt-2 p-2 w-40 z-50 space-y-2">
@@ -210,7 +204,6 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Cart Icon */}
         <FaShoppingCart size={26} className="text-xl nav-link" />
       </div>
     </div>
